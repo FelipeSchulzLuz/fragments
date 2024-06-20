@@ -9,7 +9,7 @@
 
 name: ESLint
 
-on: [pull_request]
+on: [push, merge_group]
 
 jobs:
   eslint:
