@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Fragments
+
+## Overview
+
+Welcome to Fragments! This project is built using React 18 and Next.js. The primary goal of this repository is to serve as a comprehensive reference for reusable components, hooks, and functionalities tailored for retail applications. This library will help streamline the development process for future projects by providing a solid foundation of tested and documented features.
+
+## Table of Contents
+
+- [Fragments](#fragments)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Components](#components)
+    - [ExampleComponent](#examplecomponent)
+    - [Additional Components](#additional-components)
+  - [Hooks](#hooks)
+    - [useExampleHook](#useexamplehook)
+    - [Additional Hooks](#additional-hooks)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+To get started with Fragments, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/FelipeSchulzLuz/fragments
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd fragments
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+## Installation
+
+To install the library in your project, you can use npm or yarn:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install fragments
+```
+or
+```bash
+yarn add fragments
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here is an example of how to use a component from the library:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```jsx
+import { ExampleComponent } from 'fragments';
 
-## Learn More
+const MyApp = () => (
+  <div>
+    <ExampleComponent />
+  </div>
+);
 
-To learn more about Next.js, take a look at the following resources:
+export default MyApp;
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### ExampleComponent
 
-## Deploy on Vercel
+`ExampleComponent` is a simple demonstration component. Here's how to use it:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```jsx
+import { ExampleComponent } from 'fragments';
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+const MyApp = () => (
+  <div>
+    <ExampleComponent />
+  </div>
+);
+
+export default MyApp;
+```
+
+### Additional Components
+
+- **Button**: A customizable button component.
+- **Card**: A flexible card component.
+- **Modal**: A modal dialog component.
+
+## Hooks
+
+### useExampleHook
+
+`useExampleHook` is a custom hook for demonstration purposes. Here's how to use it:
+
+```jsx
+import { useExampleHook } from 'fragments';
+
+const MyComponent = () => {
+  const [state, setState] = useExampleHook();
+
+  return (
+    <div>
+      <p>{state}</p>
+      <button onClick={() => setState('New State')}>Change State</button>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+### Additional Hooks
+
+- **useFetch**: A hook for fetching data.
+- **useLocalStorage**: A hook for managing local storage.
+- **useForm**: A hook for form management.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add YourFeature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
