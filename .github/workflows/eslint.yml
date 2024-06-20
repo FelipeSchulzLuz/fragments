@@ -11,6 +11,10 @@ name: ESLint
 
 on: [push, merge_group]
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
   eslint:
     runs-on: ubuntu-latest
